@@ -1,5 +1,4 @@
 import React from "react";
-import Endpoint from "./Endpoint";
 
 export default class HeaderMenu extends React.Component {
   constructor(props) {
@@ -18,7 +17,7 @@ export default class HeaderMenu extends React.Component {
   render() {
     return (
       <div id={"header-navbar"}>
-        <Endpoint/>
+        {/**/}
       </div>
     );
   }

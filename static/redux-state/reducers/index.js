@@ -3,9 +3,9 @@ import { combineReducers } from "redux";
 import general   from "./general";
 import ui        from "./ui";
 
-const ontarioApp = combineReducers({
+const KGExplorationApp = combineReducers({
     general,
     ui
 });
 
-export default ontarioApp;
+export default KGExplorationApp;
