@@ -1,8 +1,5 @@
-@import url('bootstrap.min.css');
-@import url('navbar.css');
+@import url('reset.css');
 @import url('modal.css');
-@import url('react-bootstrap-table.min.css');
-@import url('yasqe.min.css');
 
 body {
   margin: 0;
