@@ -7,10 +7,12 @@ import {
     NavItem } from "reactstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faSitemap } from "@fortawesome/free-solid-svg-icons";
+    faSitemap,
+    faChartBar } from "@fortawesome/free-solid-svg-icons";
 
 const data = [
-    { id: 0, name: "Interactions",     icon: faSitemap, link: "/" }
+    { id: 0, name: "Venn Diagram",     icon: faSitemap, link: "/" },
+    { id: 1, name: "Bar Chart",     icon: faChartBar, link: "/barchart" },
 ];
 
 const Sidebar = ({activeSidebarTab}) => {
