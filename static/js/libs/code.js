@@ -5,7 +5,7 @@ Promise.all([
     .then(function(res) {
       return res.json();
     }),
-  fetch('/static/js/libs/data_line1_expected_noonco.json')
+  fetch('/static/js/libs/jsonFiles_treatmentLine8/data_line8_obs.json')
     .then(function(res) {
       return res.json();
     })

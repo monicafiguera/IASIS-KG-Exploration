@@ -1,3 +1,43 @@
+
+data = d3.csv("/static/js/libs/data/10_o.csv", function(error, data) {
+    var dataStr = "";
+    dataStr += "AA,GENERAL,GASTROINTESTINAL,ENDOCRINE,CUTANEOUS,PNEUMOLOGICAL,ANALYTICAL,NEUROLOGICAL,OTHER,CARDIOLOGICAL\n";
+    data.forEach(function(d) {
+        var keys = Object.keys(d);
+        for (var i=0; i<Object.keys(d).length; i++) {
+
+            var elem = d[keys[i]];
+            dataStr += elem;
+            if (i < keys.length - 1) {
+                dataStr += ",";
+            }
+        }
+        dataStr += "\n";
+    });
+    console.log("data",dataStr);
+
+    var matrix = csvToArray(dataStr);
+
+    console.log("matrix", matrix);
+
+    var nodes = matrix[0].slice(1);
+    console.log("**",nodes);
+
+    var links = [];
+    nodes.forEach(function(d, i) {
+      matrix[i+1].slice(1).forEach(function(e, j) {
+        if(matrix[i+1][j+1] > 0) {
+          links.push({source: i, target: j, weight: parseFloat(e)});
+        }
+      });
+    });
+
+    console.log("links",links);
+
+    createJSON(nodes, links);
+});
+
+
 function csvToArray (csv) {
     rows = csv.split("\n");
 
@@ -6,36 +46,58 @@ function csvToArray (csv) {
     });
 }
 
-// Hard-coded for brevity, but you can set this variable with FileReader
-//var csv = "the,quick,brown,fox\n" +
-//          "jumps,over,the,lazy,dog";
+function createJSON(nodes, links) {
+    var result = [];
 
-var csv = "AA,GENERAL,GASTROINTESTINAL,ENDOCRINE,CUTANEOUS,PNEUMOLOGICAL,ANALYTICAL,NEUROLOGICAL,OTHER,CARDIOLOGICAL\n" +
-"GENERAL,0,73.11827956989248,10.32258064516129,7.741935483870968,18.70967741935484,43.44086021505376,7.096774193548387,3.4408602150537635,0\n" +
-"GASTROINTESTINAL,73.11827956989248,0,9.032258064516128,7.741935483870968,18.9247311827957,44.516129032258064,7.526881720430108,3.4408602150537635,0\n" +
-"ENDOCRINE,10.32258064516129,9.032258064516128,0,1.7204301075268817,2.1505376344086025,6.881720430107527,1.0752688172043012,0.21505376344086022,0\n" +
-"CUTANEOUS,7.741935483870968,7.741935483870968,1.7204301075268817,0,2.3655913978494625,4.731182795698925,0.6451612903225806,0.43010752688172044,0\n" +
-"PNEUMOLOGICAL,18.70967741935484,18.9247311827957,2.1505376344086025,2.3655913978494625,0,11.397849462365592,3.010752688172043,1.2903225806451613,0\n" +
-"ANALYTICAL,43.44086021505376,44.516129032258064,6.881720430107527,4.731182795698925,11.397849462365592,0,3.655913978494624,2.3655913978494625,0\n" +
-"NEUROLOGICAL,7.096774193548387,7.526881720430108,1.0752688172043012,0.6451612903225806,3.010752688172043,3.655913978494624,0,0.8602150537634409,0\n" +
-"OTHER,3.4408602150537635,3.4408602150537635,0.21505376344086022,0.43010752688172044,1.2903225806451613,2.3655913978494625,0.8602150537634409,0,0\n" +
-"CARDIOLOGICAL,0,0,0,0,0,0,0,0,0\n";
-
-var matrix = csvToArray(csv);
-
-console.log(matrix);
-
-var nodes = matrix[0].slice(1);
-
-console.log(nodes);
-
-var links = [];
-nodes.forEach(function(d, i) {
-  matrix[i+1].slice(1).forEach(function(e, j) {
-    if(matrix[i+1][j+1] > 0) {
-      links.push({source: i, target: j, weight: parseFloat(e)});
+    for (var i=0; i<nodes.length; i++) {
+        result.push({
+          "data": {
+            "id": i.toString(),
+            "idInt": parseInt(i),
+            "name": nodes[i],
+            "score": 0.006769776522008331,
+            "query": true,
+            "gene": true
+          },
+          "position": {
+            "x": 481.0169597039117,
+            "y": 384.8210888234145
+          },
+          "group": "nodes",
+          "removed": false,
+          "selected": false,
+          "selectable": true,
+          "locked": false,
+          "grabbed": false,
+          "grabbable": true,
+          "classes": "fn10273 fn6944 fn9471 fn10569 fn8023 fn6956 fn6935 fn8147 fn6939 fn6936 fn6629 fn7928 fn6947 fn8612 fn6957 fn8786 fn6246 fn9367 fn6945 fn6946 fn10024 fn10022 fn6811 fn9361 fn6279 fn6278 fn8569 fn7641 fn8568 fn6943"
+        })
     }
-  });
-});
+    for (var i=0; i<links.length; i++) {
+        result.push(
+            {"data": {
+                "source": links[i].source.toString(),
+                "target": links[i].target.toString(),
+                "weight": links[i].weight,
+                "group": "coexp",
+                "networkId": 1133,
+                "networkGroupId": 18,
+                "intn": true,
+                "rIntnId": i + 2,
+                "id": "e" + i.toString()
+              },
+              "position": {},
+              "group": "edges",
+              "removed": false,
+              "selected": false,
+              "selectable": true,
+              "locked": false,
+              "grabbed": false,
+              "grabbable": true,
+              "classes": ""
+            }
+        );
+    }
+    console.log(result);
 
-console.log(links);
+}
