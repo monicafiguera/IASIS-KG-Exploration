@@ -12,6 +12,7 @@
     "classnames": "^2.2.6",
     "cross-fetch": "^3.0.1",
     "d3": "^5.8.2",
+    "d3-request": "^1.0.6",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
