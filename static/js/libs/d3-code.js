@@ -1,5 +1,5 @@
 
-data = d3.csv("/static/js/libs/data/10_o.csv", function(error, data) {
+data = d3.csv("/static/js/libs/data/10_e.csv", function(error, data) {
     var dataStr = "";
     dataStr += "AA,GENERAL,GASTROINTESTINAL,ENDOCRINE,CUTANEOUS,PNEUMOLOGICAL,ANALYTICAL,NEUROLOGICAL,OTHER,CARDIOLOGICAL\n";
     data.forEach(function(d) {
