@@ -1,0 +1,13 @@
+patient_id,drug_bank_id,drug_name
+1124004,DB01248,docetaxel
+156018,DB09035,nivolumab
+2332889,DB09330,osimertinib
+264735,DB11363,alectinib
+2701156,DB08916,afatinib
+2758457,DB01248,docetaxel
+402546,DB11363,alectinib
+60097,DB01229,paclitaxel
+656154,DB09037,pembrolizumab
+657133,DB00958,carboplatin
+723676,DB01229,paclitaxel
+91773,DB00441,gemcitabine
