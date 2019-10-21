@@ -5,7 +5,7 @@ Promise.all([
     .then(function(res) {
       return res.json();
     }),
-  fetch('/static/js/libs/jsonFiles_treatmentLine10/data_line10_exp_and_noonco.json')
+  fetch('/static/js/libs/jsonFiles_treatmentLine10/data_line10_obs.json')
     .then(function(res) {
       return res.json();
     })
@@ -39,7 +39,7 @@ Promise.all([
       container: document.getElementById('cy'),
       style: dataArray[0],
       elements: dataArray[1],
-      layout: { name: 'random' }
+      layout: { name: 'cola' }
     });
 
     var params = {
@@ -198,7 +198,7 @@ Promise.all([
       var g = n.data('name');
 
       var p = n.data('patients');
-      console.log("p",p,g)
+
       var $links = [
         {
           name: 'Patients:' + p.toString(),

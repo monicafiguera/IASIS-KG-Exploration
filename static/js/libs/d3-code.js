@@ -21,13 +21,23 @@ data = d3.csv("/static/js/libs/data/10_e.csv", function(error, data) {
     console.log("matrix", matrix);
 
     var nodes = matrix[0].slice(1);
-    console.log("**",nodes);
+    console.log("nodes",nodes);
 
     var links = [];
     nodes.forEach(function(d, i) {
       matrix[i+1].slice(1).forEach(function(e, j) {
         if(matrix[i+1][j+1] > 0) {
-          links.push({source: i, target: j, weight: parseFloat(e)});
+            var addLink = true;
+            for (link of links) {
+                if (link["source"] === j && link["target"] === i) {
+                    addLink = false;
+                }
+            }
+
+            if (addLink) {
+              links.push({source: i, target: j, weight: parseFloat(e)});
+            }
+
         }
       });
     });
