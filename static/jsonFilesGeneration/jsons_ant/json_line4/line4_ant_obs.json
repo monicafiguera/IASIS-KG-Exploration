@@ -1,0 +1,274 @@
+[
+  {
+    "classes": "fn10273 fn6944 fn9471 fn10569 fn8023 fn6956 fn6935 fn8147 fn6939 fn6936 fn6629 fn7928 fn6947 fn8612 fn6957 fn8786 fn6246 fn9367 fn6945 fn6946 fn10024 fn10022 fn6811 fn9361 fn6279 fn6278 fn8569 fn7641 fn8568 fn6943",
+    "data": {
+      "id": "0",
+      "idInt": 0,
+      "name": "GENERAL",
+      "patients": 7
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "nodes",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "fn10273 fn6944 fn9471 fn10569 fn8023 fn6956 fn6935 fn8147 fn6939 fn6936 fn6629 fn7928 fn6947 fn8612 fn6957 fn8786 fn6246 fn9367 fn6945 fn6946 fn10024 fn10022 fn6811 fn9361 fn6279 fn6278 fn8569 fn7641 fn8568 fn6943",
+    "data": {
+      "id": "1",
+      "idInt": 1,
+      "name": "GASTROINTESTINAL",
+      "patients": 7
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "nodes",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "fn10273 fn6944 fn9471 fn10569 fn8023 fn6956 fn6935 fn8147 fn6939 fn6936 fn6629 fn7928 fn6947 fn8612 fn6957 fn8786 fn6246 fn9367 fn6945 fn6946 fn10024 fn10022 fn6811 fn9361 fn6279 fn6278 fn8569 fn7641 fn8568 fn6943",
+    "data": {
+      "id": "2",
+      "idInt": 2,
+      "name": "ENDOCRINE",
+      "patients": 4
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "nodes",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "fn10273 fn6944 fn9471 fn10569 fn8023 fn6956 fn6935 fn8147 fn6939 fn6936 fn6629 fn7928 fn6947 fn8612 fn6957 fn8786 fn6246 fn9367 fn6945 fn6946 fn10024 fn10022 fn6811 fn9361 fn6279 fn6278 fn8569 fn7641 fn8568 fn6943",
+    "data": {
+      "id": "3",
+      "idInt": 3,
+      "name": "CUTANEOUS",
+      "patients": 3
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "nodes",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "fn10273 fn6944 fn9471 fn10569 fn8023 fn6956 fn6935 fn8147 fn6939 fn6936 fn6629 fn7928 fn6947 fn8612 fn6957 fn8786 fn6246 fn9367 fn6945 fn6946 fn10024 fn10022 fn6811 fn9361 fn6279 fn6278 fn8569 fn7641 fn8568 fn6943",
+    "data": {
+      "id": "4",
+      "idInt": 4,
+      "name": "PNEUMOLOGICAL",
+      "patients": 0
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "nodes",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "fn10273 fn6944 fn9471 fn10569 fn8023 fn6956 fn6935 fn8147 fn6939 fn6936 fn6629 fn7928 fn6947 fn8612 fn6957 fn8786 fn6246 fn9367 fn6945 fn6946 fn10024 fn10022 fn6811 fn9361 fn6279 fn6278 fn8569 fn7641 fn8568 fn6943",
+    "data": {
+      "id": "5",
+      "idInt": 5,
+      "name": "ANALYTICAL",
+      "patients": 3
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "nodes",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "fn10273 fn6944 fn9471 fn10569 fn8023 fn6956 fn6935 fn8147 fn6939 fn6936 fn6629 fn7928 fn6947 fn8612 fn6957 fn8786 fn6246 fn9367 fn6945 fn6946 fn10024 fn10022 fn6811 fn9361 fn6279 fn6278 fn8569 fn7641 fn8568 fn6943",
+    "data": {
+      "id": "6",
+      "idInt": 6,
+      "name": "NEUROLOGICAL",
+      "patients": 0
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "nodes",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "fn10273 fn6944 fn9471 fn10569 fn8023 fn6956 fn6935 fn8147 fn6939 fn6936 fn6629 fn7928 fn6947 fn8612 fn6957 fn8786 fn6246 fn9367 fn6945 fn6946 fn10024 fn10022 fn6811 fn9361 fn6279 fn6278 fn8569 fn7641 fn8568 fn6943",
+    "data": {
+      "id": "7",
+      "idInt": 7,
+      "name": "OTHER",
+      "patients": 0
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "nodes",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "fn10273 fn6944 fn9471 fn10569 fn8023 fn6956 fn6935 fn8147 fn6939 fn6936 fn6629 fn7928 fn6947 fn8612 fn6957 fn8786 fn6246 fn9367 fn6945 fn6946 fn10024 fn10022 fn6811 fn9361 fn6279 fn6278 fn8569 fn7641 fn8568 fn6943",
+    "data": {
+      "id": "8",
+      "idInt": 8,
+      "name": "CARDIOLOGICAL",
+      "patients": 0
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "nodes",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e0",
+      "source": 0,
+      "target": 1,
+      "weight": 100.0
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e1",
+      "source": 0,
+      "target": 2,
+      "weight": 66.66666666666666
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e2",
+      "source": 0,
+      "target": 3,
+      "weight": 33.33333333333333
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e3",
+      "source": 0,
+      "target": 5,
+      "weight": 33.33333333333333
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e4",
+      "source": 1,
+      "target": 2,
+      "weight": 66.66666666666666
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e5",
+      "source": 1,
+      "target": 3,
+      "weight": 33.33333333333333
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e6",
+      "source": 1,
+      "target": 5,
+      "weight": 33.33333333333333
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e7",
+      "source": 3,
+      "target": 5,
+      "weight": 33.33333333333333
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  }
+]
