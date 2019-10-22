@@ -1,0 +1,16 @@
+patient_id,drug_bank_id,drug_name
+1040515,DB09035,nivolumab
+1237520,DB09037,pembrolizumab
+2054963,DB09035,nivolumab
+2428845,DB09035,nivolumab
+2462990,DB09037,pembrolizumab
+2500687,DB06186,ipilimumab
+2500687,DB09035,nivolumab
+2682136,DB06186,ipilimumab
+2682136,DB09035,nivolumab
+356846,DB09037,pembrolizumab
+415573,DB09035,nivolumab
+416112,DB06186,ipilimumab
+416112,DB09035,nivolumab
+429640,DB09035,nivolumab
+522583,DB09037,pembrolizumab

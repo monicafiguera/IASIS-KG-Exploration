@@ -1,0 +1,16 @@
+patient_id,drug_bank_id,drug_name
+1104398,DB09063,ceritinib
+1133311,DB09330,osimertinib
+1240255,DB00317,gefitinib
+133673,DB00530,erlotinib
+2198624,DB00317,gefitinib
+2332889,DB08916,afatinib
+2454551,DB08865,crizotinib
+264735,DB08865,crizotinib
+306631,DB08916,afatinib
+402546,DB08865,crizotinib
+611795,DB08916,afatinib
+638929,DB08865,crizotinib
+874541,DB08916,afatinib
+922418,DB00317,gefitinib
+998317,DB09330,osimertinib

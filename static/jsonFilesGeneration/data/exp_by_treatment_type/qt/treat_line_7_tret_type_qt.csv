@@ -1,0 +1,7 @@
+patient_id,drug_bank_id,drug_name
+1124004,DB01248,docetaxel
+2758457,DB01248,docetaxel
+60097,DB01229,paclitaxel
+657133,DB00958,carboplatin
+723676,DB01229,paclitaxel
+91773,DB00441,gemcitabine
