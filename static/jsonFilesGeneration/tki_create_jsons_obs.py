@@ -45,15 +45,14 @@ def to_json_edge(source, target, weight, edge_count):
 
 
 drugLineFiles = [
-    './data/obs_by_treatment_type/qt/qt_treatment_line1.csv',
-    './data/obs_by_treatment_type/qt/qt_treatment_line2.csv',
-    './data/obs_by_treatment_type/qt/qt_treatment_line3.csv',
-    './data/obs_by_treatment_type/qt/qt_treatment_line4.csv',
-    './data/obs_by_treatment_type/qt/qt_treatment_line5.csv',
-    './data/obs_by_treatment_type/qt/qt_treatment_line6.csv',
-    './data/obs_by_treatment_type/qt/qt_treatment_line7.csv',
-    './data/obs_by_treatment_type/qt/qt_treatment_line8.csv',
-    './data/obs_by_treatment_type/qt/qt_treatment_line10.csv'
+    './data/obs_by_treatment_type/tki/tki_treatment_line1.csv',
+    './data/obs_by_treatment_type/tki/tki_treatment_line2.csv',
+    './data/obs_by_treatment_type/tki/tki_treatment_line3.csv',
+    './data/obs_by_treatment_type/tki/tki_treatment_line4.csv',
+    './data/obs_by_treatment_type/tki/tki_treatment_line5.csv',
+    './data/obs_by_treatment_type/tki/tki_treatment_line6.csv',
+    './data/obs_by_treatment_type/tki/tki_treatment_line7.csv',
+    './data/obs_by_treatment_type/tki/tki_treatment_line8.csv'
 ]
 
 for file in drugLineFiles:
@@ -181,12 +180,12 @@ for file in drugLineFiles:
 
     json_data = json.dumps(data, indent=2, sort_keys=True)
 
-    subStrFile = "qt_treatment_line"
+    subStrFile = "tki_treatment_line"
     subStrFileIndex = file.index(subStrFile)
     index = file[subStrFileIndex + len(subStrFile): -4]
 
-    dirname = "./jsons_qt/json_line" + str(index)
+    dirname = "./jsons_tki/json_line" + str(index)
     if not os.path.exists(dirname):
         os.mkdir(dirname)
 
-    open(dirname + "/line" + str(index) + "_qt_obs.json", "w", encoding="utf8").write(json_data)
+    open(dirname + "/line" + str(index) + "_tki_obs.json", "w", encoding="utf8").write(json_data)
