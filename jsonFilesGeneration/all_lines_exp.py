@@ -196,14 +196,14 @@ for file in drugLineFiles:
     for i, l in enumerate(links):
         data.append(to_json_edge(l["source"], l["target"], l["weight"], i))
 
-    json_data = json.dumps(data)
+    json_data = json.dumps(data, indent=2, sort_keys=True)
 
     subStrFile = "patient-drug_line"
     subStrFileIndex = file.index(subStrFile);
     index = file[subStrFileIndex + len(subStrFile) : -4]
 
-    dirname = "./json_line" + str(index)
+    dirname = "./jsons_all/json_line" + str(index)
     if not os.path.exists(dirname):
         os.mkdir(dirname)
 
-    open(dirname + "/line" + str(index) + "_exp.json", "w", encoding="utf8").write(json_data)
+    open(dirname + "/line" + str(index) + "_all_exp.json", "w", encoding="utf8").write(json_data)

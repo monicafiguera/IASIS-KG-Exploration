@@ -1,0 +1,594 @@
+[
+  {
+    "classes": "fn10273 fn6944 fn9471 fn10569 fn8023 fn6956 fn6935 fn8147 fn6939 fn6936 fn6629 fn7928 fn6947 fn8612 fn6957 fn8786 fn6246 fn9367 fn6945 fn6946 fn10024 fn10022 fn6811 fn9361 fn6279 fn6278 fn8569 fn7641 fn8568 fn6943",
+    "data": {
+      "id": "0",
+      "idInt": 0,
+      "name": "GENERAL",
+      "patients": 762
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "nodes",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "fn10273 fn6944 fn9471 fn10569 fn8023 fn6956 fn6935 fn8147 fn6939 fn6936 fn6629 fn7928 fn6947 fn8612 fn6957 fn8786 fn6246 fn9367 fn6945 fn6946 fn10024 fn10022 fn6811 fn9361 fn6279 fn6278 fn8569 fn7641 fn8568 fn6943",
+    "data": {
+      "id": "1",
+      "idInt": 1,
+      "name": "GASTROINTESTINAL",
+      "patients": 764
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "nodes",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "fn10273 fn6944 fn9471 fn10569 fn8023 fn6956 fn6935 fn8147 fn6939 fn6936 fn6629 fn7928 fn6947 fn8612 fn6957 fn8786 fn6246 fn9367 fn6945 fn6946 fn10024 fn10022 fn6811 fn9361 fn6279 fn6278 fn8569 fn7641 fn8568 fn6943",
+    "data": {
+      "id": "2",
+      "idInt": 2,
+      "name": "ENDOCRINE",
+      "patients": 146
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "nodes",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "fn10273 fn6944 fn9471 fn10569 fn8023 fn6956 fn6935 fn8147 fn6939 fn6936 fn6629 fn7928 fn6947 fn8612 fn6957 fn8786 fn6246 fn9367 fn6945 fn6946 fn10024 fn10022 fn6811 fn9361 fn6279 fn6278 fn8569 fn7641 fn8568 fn6943",
+    "data": {
+      "id": "3",
+      "idInt": 3,
+      "name": "CUTANEOUS",
+      "patients": 118
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "nodes",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "fn10273 fn6944 fn9471 fn10569 fn8023 fn6956 fn6935 fn8147 fn6939 fn6936 fn6629 fn7928 fn6947 fn8612 fn6957 fn8786 fn6246 fn9367 fn6945 fn6946 fn10024 fn10022 fn6811 fn9361 fn6279 fn6278 fn8569 fn7641 fn8568 fn6943",
+    "data": {
+      "id": "4",
+      "idInt": 4,
+      "name": "PNEUMOLOGICAL",
+      "patients": 269
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "nodes",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "fn10273 fn6944 fn9471 fn10569 fn8023 fn6956 fn6935 fn8147 fn6939 fn6936 fn6629 fn7928 fn6947 fn8612 fn6957 fn8786 fn6246 fn9367 fn6945 fn6946 fn10024 fn10022 fn6811 fn9361 fn6279 fn6278 fn8569 fn7641 fn8568 fn6943",
+    "data": {
+      "id": "5",
+      "idInt": 5,
+      "name": "ANALYTICAL",
+      "patients": 544
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "nodes",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "fn10273 fn6944 fn9471 fn10569 fn8023 fn6956 fn6935 fn8147 fn6939 fn6936 fn6629 fn7928 fn6947 fn8612 fn6957 fn8786 fn6246 fn9367 fn6945 fn6946 fn10024 fn10022 fn6811 fn9361 fn6279 fn6278 fn8569 fn7641 fn8568 fn6943",
+    "data": {
+      "id": "6",
+      "idInt": 6,
+      "name": "NEUROLOGICAL",
+      "patients": 111
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "nodes",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "fn10273 fn6944 fn9471 fn10569 fn8023 fn6956 fn6935 fn8147 fn6939 fn6936 fn6629 fn7928 fn6947 fn8612 fn6957 fn8786 fn6246 fn9367 fn6945 fn6946 fn10024 fn10022 fn6811 fn9361 fn6279 fn6278 fn8569 fn7641 fn8568 fn6943",
+    "data": {
+      "id": "7",
+      "idInt": 7,
+      "name": "OTHER",
+      "patients": 56
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "nodes",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "fn10273 fn6944 fn9471 fn10569 fn8023 fn6956 fn6935 fn8147 fn6939 fn6936 fn6629 fn7928 fn6947 fn8612 fn6957 fn8786 fn6246 fn9367 fn6945 fn6946 fn10024 fn10022 fn6811 fn9361 fn6279 fn6278 fn8569 fn7641 fn8568 fn6943",
+    "data": {
+      "id": "8",
+      "idInt": 8,
+      "name": "CARDIOLOGICAL",
+      "patients": 0
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "nodes",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e0",
+      "source": 0,
+      "target": 1,
+      "weight": 73.11827956989248
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e1",
+      "source": 0,
+      "target": 2,
+      "weight": 10.32258064516129
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e2",
+      "source": 0,
+      "target": 3,
+      "weight": 7.741935483870968
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e3",
+      "source": 0,
+      "target": 4,
+      "weight": 18.70967741935484
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e4",
+      "source": 0,
+      "target": 5,
+      "weight": 43.44086021505376
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e5",
+      "source": 0,
+      "target": 6,
+      "weight": 7.096774193548387
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e6",
+      "source": 0,
+      "target": 7,
+      "weight": 3.4408602150537635
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e7",
+      "source": 1,
+      "target": 2,
+      "weight": 9.032258064516128
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e8",
+      "source": 1,
+      "target": 3,
+      "weight": 7.741935483870968
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e9",
+      "source": 1,
+      "target": 4,
+      "weight": 18.9247311827957
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e10",
+      "source": 1,
+      "target": 5,
+      "weight": 44.516129032258064
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e11",
+      "source": 1,
+      "target": 6,
+      "weight": 7.526881720430108
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e12",
+      "source": 1,
+      "target": 7,
+      "weight": 3.4408602150537635
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e13",
+      "source": 2,
+      "target": 3,
+      "weight": 1.7204301075268817
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e14",
+      "source": 2,
+      "target": 4,
+      "weight": 2.1505376344086025
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e15",
+      "source": 2,
+      "target": 5,
+      "weight": 6.881720430107527
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e16",
+      "source": 2,
+      "target": 6,
+      "weight": 1.0752688172043012
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e17",
+      "source": 2,
+      "target": 7,
+      "weight": 0.21505376344086022
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e18",
+      "source": 3,
+      "target": 4,
+      "weight": 2.3655913978494625
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e19",
+      "source": 3,
+      "target": 5,
+      "weight": 4.731182795698925
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e20",
+      "source": 3,
+      "target": 6,
+      "weight": 0.6451612903225806
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e21",
+      "source": 3,
+      "target": 7,
+      "weight": 0.43010752688172044
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e22",
+      "source": 4,
+      "target": 5,
+      "weight": 11.397849462365592
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e23",
+      "source": 4,
+      "target": 6,
+      "weight": 3.010752688172043
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e24",
+      "source": 4,
+      "target": 7,
+      "weight": 1.2903225806451613
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e25",
+      "source": 5,
+      "target": 6,
+      "weight": 3.655913978494624
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e26",
+      "source": 5,
+      "target": 7,
+      "weight": 2.3655913978494625
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  },
+  {
+    "classes": "",
+    "data": {
+      "id": "e27",
+      "source": 6,
+      "target": 7,
+      "weight": 0.8602150537634409
+    },
+    "grabbable": true,
+    "grapped": false,
+    "group": "edges",
+    "locked": false,
+    "removed": false,
+    "selectable": true,
+    "selected": false
+  }
+]
