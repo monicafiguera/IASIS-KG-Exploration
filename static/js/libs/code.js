@@ -5,7 +5,7 @@ Promise.all([
     .then(function(res) {
       return res.json();
     }),
-  fetch('/static/jsonFilesGeneration/jsons_all/json_line1/line1_all_obs.json')
+  fetch('/static/jsonFilesGeneration/jsons_all/json_line1/line1_all_exp.json')
     .then(function(res) {
       return res.json();
     })
@@ -39,7 +39,7 @@ Promise.all([
       container: document.getElementById('cy'),
       style: dataArray[0],
       elements: dataArray[1],
-      layout: { name: 'cola' }
+      layout: { name: 'random' }
     });
 
     var params = {
@@ -178,6 +178,7 @@ Promise.all([
 
     var hideAllTippies = function(){
       cy.nodes().forEach(hideTippy);
+      cy.edges().forEach(hideTippy);
     };
 
     cy.on('tap', function(e){
@@ -192,6 +193,32 @@ Promise.all([
 
     cy.on('zoom pan', function(e){
       hideAllTippies();
+    });
+
+    cy.edges().forEach(function(e){
+        var g = e.data('id');
+
+        var p = e.data('patients');
+        console.log("e",e, p)
+
+        var $links = [
+        {
+          name: 'Patients:' + p.toString(),
+          url: p
+        }
+        ].map(function( link ){
+        return h('div', { 'class': '' }, [ t(link.name) ]);
+        });
+
+        var tippy = makeTippy(e, h('div', {}, $links));
+
+        e.data('tippy', tippy);
+
+        e.on('click', function(e){
+        tippy.show();
+
+        cy.edges().not(e).forEach(hideTippy);
+        });
     });
 
     cy.nodes().forEach(function(n){

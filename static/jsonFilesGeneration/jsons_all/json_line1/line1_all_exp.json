@@ -149,7 +149,8 @@
       "id": "e0",
       "source": 0,
       "target": 1,
-      "weight": 56.414473684210535
+      "weight": 56.414473684210535,
+      "patients": 0
     },
     "grabbable": true,
     "grapped": false,
@@ -165,7 +166,8 @@
       "id": "e1",
       "source": 0,
       "target": 3,
-      "weight": 31.414473684210524
+      "weight": 31.414473684210524,
+      "patients": 1234
     },
     "grabbable": true,
     "grapped": false,
@@ -181,7 +183,8 @@
       "id": "e2",
       "source": 0,
       "target": 5,
-      "weight": 2.9605263157894735
+      "weight": 2.9605263157894735,
+      "patients": 2000
     },
     "grabbable": true,
     "grapped": false,
@@ -197,7 +200,8 @@
       "id": "e3",
       "source": 0,
       "target": 6,
-      "weight": 14.473684210526317
+      "weight": 14.473684210526317,
+      "patients": 1
     },
     "grabbable": true,
     "grapped": false,
@@ -213,7 +217,8 @@
       "id": "e4",
       "source": 1,
       "target": 3,
-      "weight": 31.414473684210524
+      "weight": 31.414473684210524,
+      "patients": 50
     },
     "grabbable": true,
     "grapped": false,
@@ -229,7 +234,8 @@
       "id": "e5",
       "source": 1,
       "target": 4,
-      "weight": 0.1644736842105263
+      "weight": 0.1644736842105263,
+      "patients": 200
     },
     "grabbable": true,
     "grapped": false,
@@ -245,7 +251,8 @@
       "id": "e6",
       "source": 2,
       "target": 4,
-      "weight": 0.8223684210526315
+      "weight": 0.8223684210526315,
+      "patients": 100
     },
     "grabbable": true,
     "grapped": false,
@@ -261,7 +268,8 @@
       "id": "e7",
       "source": 5,
       "target": 6,
-      "weight": 2.9605263157894735
+      "weight": 2.9605263157894735,
+      "patients": 10000
     },
     "grabbable": true,
     "grapped": false,
