@@ -292,7 +292,6 @@ if __name__ == "__main__":
 
                 json_data = json.dumps(data, indent=2, sort_keys=True)
 
-                # TODO: calculate path and file name
                 subStrFile = "_line"
                 subStrFileIndex = file.rindex(subStrFile)
                 index = file[subStrFileIndex + len(subStrFile): -4]
@@ -303,17 +302,3 @@ if __name__ == "__main__":
 
                 filename = "/line" + str(index) + "_" + treat + "_" + mode + ".json"
                 open(dirname + filename, "w", encoding="utf8").write(json_data)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
