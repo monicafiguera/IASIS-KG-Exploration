@@ -54,51 +54,6 @@ Promise.all([
 
     layout.run();
 
-    var $btnParam = h('div', {
-      'class': 'param'
-    }, []);
-
-    var $config = $('#config');
-
-    $config.appendChild( $btnParam );
-
-    var sliders = [
-      {
-        label: 'Edge length',
-        param: 'edgeLengthVal',
-        min: 1,
-        max: 200
-      },
-
-      {
-        label: 'Node spacing',
-        param: 'nodeSpacing',
-        min: 1,
-        max: 50
-      }
-    ];
-
-    var buttons = [
-      {
-        label: h('span', { 'class': 'fa fa-random' }, []),
-        layoutOpts: {
-          randomize: true,
-          flow: null
-        }
-      },
-
-      {
-        label: h('span', { 'class': 'fa fa-long-arrow-down' }, []),
-        layoutOpts: {
-          flow: { axis: 'y', minSeparation: 30 }
-        }
-      }
-    ];
-
-    sliders.forEach( makeSlider );
-
-    buttons.forEach( makeButton );
-
     function makeLayout( opts ){
       params.randomize = false;
       params.edgeLength = function(e){ return params.edgeLengthVal / e.data('weight'); };
@@ -110,59 +65,13 @@ Promise.all([
       return cy.layout( params );
     }
 
-    function makeSlider( opts ){
-      var $input = h('input', {
-        id: 'slider-'+opts.param,
-        type: 'range',
-        min: opts.min,
-        max: opts.max,
-        step: 1,
-        value: params[ opts.param ],
-        'class': 'slider'
-      }, []);
-
-      var $param = h('div', { 'class': 'param' }, []);
-
-      var $label = h('label', { 'class': 'label label-default', for: 'slider-'+opts.param }, [ t(opts.label) ]);
-
-      $param.appendChild( $label );
-      $param.appendChild( $input );
-
-      $config.appendChild( $param );
-
-      var update = _.throttle(function(){
-        params[ opts.param ] = $input.value;
-
-        layout.stop();
-        layout = makeLayout();
-        layout.run();
-      }, 1000/30);
-
-      $input.addEventListener('input', update);
-      $input.addEventListener('change', update);
-    }
-
-    function makeButton( opts ){
-      var $button = h('button', { 'class': 'btn btn-default' }, [ opts.label ]);
-
-      $btnParam.appendChild( $button );
-
-      $button.addEventListener('click', function(){
-        layout.stop();
-
-        if( opts.fn ){ opts.fn(); }
-
-        layout = makeLayout( opts.layoutOpts );
-        layout.run();
-      });
-    }
-
     var makeTippy = function(node, html){
       return tippy( node.popperRef(), {
         html: html,
         trigger: 'manual',
         arrow: true,
-        placement: 'bottom',
+        positionFixed: true,
+          //placement: 'bottom',
         hideOnClick: false,
         interactive: true
       } ).tooltips[0];
@@ -187,37 +96,36 @@ Promise.all([
       }
     });
 
-    cy.on('tap', 'edge', function(e){
-      hideAllTippies();
-    });
 
     cy.on('zoom pan', function(e){
       hideAllTippies();
     });
 
-    cy.edges().forEach(function(e){
-        var g = e.data('id');
-
-        var p = e.data('patients');
-        console.log("e",e, p)
+    cy.edges().forEach(function(n){
+        var p = n.data('patients');
 
         var $links = [
         {
-          name: 'Patients:' + p.toString(),
+          name: 'Patients: ' + p.toString().replace(/,/g, ',\n'),
           url: p
         }
         ].map(function( link ){
         return h('div', { 'class': '' }, [ t(link.name) ]);
         });
 
-        var tippy = makeTippy(e, h('div', {}, $links));
+        var tippy = makeTippy(n, h('div', {}, $links));
 
-        e.data('tippy', tippy);
+        n.data('tippy', tippy);
 
-        e.on('click', function(e){
-        tippy.show();
+        n.on('select', function(e){
+            tippy.show();
 
-        cy.edges().not(e).forEach(hideTippy);
+            cy.edges().not(n).forEach(hideTippy);
+            cy.nodes().forEach(hideTippy);
+        });
+
+        n.on('unselect', function(e) {
+            hideTippy(n);
         });
     });
 
@@ -228,7 +136,7 @@ Promise.all([
 
       var $links = [
         {
-          name: 'Patients:' + p.toString(),
+          name: 'Patients: ' + p.toString(),
           url: p
         }
       ].map(function( link ){
