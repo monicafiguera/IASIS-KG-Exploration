@@ -298,7 +298,7 @@ if __name__ == "__main__":
                 subStrFileIndex = file.rindex(subStrFile)
                 index = file[subStrFileIndex + len(subStrFile): -4]
 
-                dirname = "./jsons_" + treat + "/json_line" + str(index)
+                dirname = "./jsons_" + treat
                 if not os.path.exists(dirname):
                     os.mkdir(dirname)
 
