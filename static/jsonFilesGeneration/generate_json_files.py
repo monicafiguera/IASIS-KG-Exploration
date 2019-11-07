@@ -276,10 +276,12 @@ if __name__ == "__main__":
                                     if v == j:
                                         dest = k
 
-                                npatients = []
+                                # npatients = []
+                                npatients = 0
                                 for patient in patient_tox.keys():
                                     if src in patient_tox[patient] and dest in patient_tox[patient]:
-                                        npatients.append(patient)
+                                        # npatients.append(patient)
+                                        npatients += 1
                                 links.append({"source": i, "target": j, "weight": elem, "patients": npatients})
 
                 data = []
