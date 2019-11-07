@@ -19,3 +19,5 @@ sparql2neo4j/
 **/.DS_Store
 
 node_modules
+
+venv/
