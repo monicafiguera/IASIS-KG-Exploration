@@ -147,6 +147,7 @@
     "classes": "",
     "data": {
       "id": "e0",
+      "patients": 3,
       "source": 0,
       "target": 1,
       "weight": 0.7177033492822966
@@ -163,6 +164,7 @@
     "classes": "",
     "data": {
       "id": "e1",
+      "patients": 3,
       "source": 0,
       "target": 3,
       "weight": 0.7177033492822966
@@ -179,6 +181,7 @@
     "classes": "",
     "data": {
       "id": "e2",
+      "patients": 9,
       "source": 0,
       "target": 5,
       "weight": 1.9138755980861244
@@ -195,6 +198,7 @@
     "classes": "",
     "data": {
       "id": "e3",
+      "patients": 8,
       "source": 0,
       "target": 6,
       "weight": 2.15311004784689
@@ -211,6 +215,7 @@
     "classes": "",
     "data": {
       "id": "e4",
+      "patients": 8,
       "source": 1,
       "target": 3,
       "weight": 1.9138755980861244
@@ -227,6 +232,7 @@
     "classes": "",
     "data": {
       "id": "e5",
+      "patients": 30,
       "source": 1,
       "target": 5,
       "weight": 4.30622009569378
@@ -243,6 +249,7 @@
     "classes": "",
     "data": {
       "id": "e6",
+      "patients": 6,
       "source": 1,
       "target": 7,
       "weight": 0.23923444976076555
@@ -259,6 +266,7 @@
     "classes": "",
     "data": {
       "id": "e7",
+      "patients": 13,
       "source": 2,
       "target": 5,
       "weight": 3.110047846889952
@@ -275,6 +283,7 @@
     "classes": "",
     "data": {
       "id": "e8",
+      "patients": 6,
       "source": 3,
       "target": 5,
       "weight": 1.1961722488038278
@@ -291,6 +300,7 @@
     "classes": "",
     "data": {
       "id": "e9",
+      "patients": 8,
       "source": 5,
       "target": 6,
       "weight": 1.9138755980861244
@@ -307,6 +317,7 @@
     "classes": "",
     "data": {
       "id": "e10",
+      "patients": 4,
       "source": 5,
       "target": 7,
       "weight": 0.23923444976076555

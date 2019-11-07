@@ -147,10 +147,10 @@
     "classes": "",
     "data": {
       "id": "e0",
+      "patients": 339,
       "source": 0,
       "target": 1,
-      "weight": 56.414473684210535,
-      "patients": 0
+      "weight": 56.414473684210535
     },
     "grabbable": true,
     "grapped": false,
@@ -164,10 +164,10 @@
     "classes": "",
     "data": {
       "id": "e1",
+      "patients": 192,
       "source": 0,
       "target": 3,
-      "weight": 31.414473684210524,
-      "patients": 1234
+      "weight": 31.414473684210524
     },
     "grabbable": true,
     "grapped": false,
@@ -181,10 +181,10 @@
     "classes": "",
     "data": {
       "id": "e2",
+      "patients": 18,
       "source": 0,
       "target": 5,
-      "weight": 2.9605263157894735,
-      "patients": 2000
+      "weight": 2.9605263157894735
     },
     "grabbable": true,
     "grapped": false,
@@ -198,10 +198,10 @@
     "classes": "",
     "data": {
       "id": "e3",
+      "patients": 84,
       "source": 0,
       "target": 6,
-      "weight": 14.473684210526317,
-      "patients": 1
+      "weight": 14.473684210526317
     },
     "grabbable": true,
     "grapped": false,
@@ -215,10 +215,10 @@
     "classes": "",
     "data": {
       "id": "e4",
+      "patients": 192,
       "source": 1,
       "target": 3,
-      "weight": 31.414473684210524,
-      "patients": 50
+      "weight": 31.414473684210524
     },
     "grabbable": true,
     "grapped": false,
@@ -232,10 +232,10 @@
     "classes": "",
     "data": {
       "id": "e5",
+      "patients": 3,
       "source": 1,
       "target": 4,
-      "weight": 0.1644736842105263,
-      "patients": 200
+      "weight": 0.1644736842105263
     },
     "grabbable": true,
     "grapped": false,
@@ -249,10 +249,10 @@
     "classes": "",
     "data": {
       "id": "e6",
+      "patients": 5,
       "source": 2,
       "target": 4,
-      "weight": 0.8223684210526315,
-      "patients": 100
+      "weight": 0.8223684210526315
     },
     "grabbable": true,
     "grapped": false,
@@ -266,10 +266,10 @@
     "classes": "",
     "data": {
       "id": "e7",
+      "patients": 18,
       "source": 5,
       "target": 6,
-      "weight": 2.9605263157894735,
-      "patients": 10000
+      "weight": 2.9605263157894735
     },
     "grabbable": true,
     "grapped": false,

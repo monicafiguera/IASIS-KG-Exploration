@@ -147,6 +147,7 @@
     "classes": "",
     "data": {
       "id": "e0",
+      "patients": 2,
       "source": 0,
       "target": 5,
       "weight": 33.33333333333333
@@ -163,6 +164,7 @@
     "classes": "",
     "data": {
       "id": "e1",
+      "patients": 4,
       "source": 0,
       "target": 6,
       "weight": 66.66666666666666
@@ -179,6 +181,7 @@
     "classes": "",
     "data": {
       "id": "e2",
+      "patients": 2,
       "source": 5,
       "target": 6,
       "weight": 33.33333333333333

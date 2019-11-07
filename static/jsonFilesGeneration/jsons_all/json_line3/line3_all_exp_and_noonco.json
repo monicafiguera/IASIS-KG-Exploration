@@ -147,6 +147,7 @@
     "classes": "",
     "data": {
       "id": "e0",
+      "patients": 37,
       "source": 0,
       "target": 1,
       "weight": 5.511811023622047
@@ -163,6 +164,7 @@
     "classes": "",
     "data": {
       "id": "e1",
+      "patients": 19,
       "source": 0,
       "target": 3,
       "weight": 3.543307086614173
@@ -179,6 +181,7 @@
     "classes": "",
     "data": {
       "id": "e2",
+      "patients": 19,
       "source": 0,
       "target": 5,
       "weight": 3.543307086614173
@@ -195,6 +198,7 @@
     "classes": "",
     "data": {
       "id": "e3",
+      "patients": 42,
       "source": 0,
       "target": 6,
       "weight": 9.05511811023622
@@ -211,6 +215,7 @@
     "classes": "",
     "data": {
       "id": "e4",
+      "patients": 24,
       "source": 1,
       "target": 3,
       "weight": 4.52755905511811
@@ -227,6 +232,7 @@
     "classes": "",
     "data": {
       "id": "e5",
+      "patients": 6,
       "source": 1,
       "target": 4,
       "weight": 0.984251968503937
@@ -243,6 +249,7 @@
     "classes": "",
     "data": {
       "id": "e6",
+      "patients": 34,
       "source": 1,
       "target": 5,
       "weight": 3.543307086614173
@@ -259,6 +266,7 @@
     "classes": "",
     "data": {
       "id": "e7",
+      "patients": 6,
       "source": 1,
       "target": 7,
       "weight": 0.19685039370078738
@@ -275,6 +283,7 @@
     "classes": "",
     "data": {
       "id": "e8",
+      "patients": 4,
       "source": 2,
       "target": 4,
       "weight": 0.7874015748031495
@@ -291,6 +300,7 @@
     "classes": "",
     "data": {
       "id": "e9",
+      "patients": 13,
       "source": 2,
       "target": 5,
       "weight": 2.559055118110236
@@ -307,6 +317,7 @@
     "classes": "",
     "data": {
       "id": "e10",
+      "patients": 6,
       "source": 3,
       "target": 5,
       "weight": 0.984251968503937
@@ -323,6 +334,7 @@
     "classes": "",
     "data": {
       "id": "e11",
+      "patients": 18,
       "source": 5,
       "target": 6,
       "weight": 3.543307086614173
@@ -339,6 +351,7 @@
     "classes": "",
     "data": {
       "id": "e12",
+      "patients": 4,
       "source": 5,
       "target": 7,
       "weight": 0.19685039370078738

@@ -147,6 +147,7 @@
     "classes": "",
     "data": {
       "id": "e0",
+      "patients": 1,
       "source": 0,
       "target": 6,
       "weight": 100.0

@@ -147,6 +147,7 @@
     "classes": "",
     "data": {
       "id": "e0",
+      "patients": 17,
       "source": 0,
       "target": 1,
       "weight": 60.71428571428571
@@ -163,6 +164,7 @@
     "classes": "",
     "data": {
       "id": "e1",
+      "patients": 3,
       "source": 0,
       "target": 2,
       "weight": 10.714285714285714
@@ -179,6 +181,7 @@
     "classes": "",
     "data": {
       "id": "e2",
+      "patients": 6,
       "source": 0,
       "target": 3,
       "weight": 21.428571428571427
@@ -195,6 +198,7 @@
     "classes": "",
     "data": {
       "id": "e3",
+      "patients": 1,
       "source": 0,
       "target": 4,
       "weight": 3.571428571428571
@@ -211,6 +215,7 @@
     "classes": "",
     "data": {
       "id": "e4",
+      "patients": 9,
       "source": 0,
       "target": 5,
       "weight": 32.142857142857146
@@ -227,6 +232,7 @@
     "classes": "",
     "data": {
       "id": "e5",
+      "patients": 1,
       "source": 0,
       "target": 7,
       "weight": 3.571428571428571
@@ -243,6 +249,7 @@
     "classes": "",
     "data": {
       "id": "e6",
+      "patients": 3,
       "source": 1,
       "target": 2,
       "weight": 10.714285714285714
@@ -259,6 +266,7 @@
     "classes": "",
     "data": {
       "id": "e7",
+      "patients": 7,
       "source": 1,
       "target": 3,
       "weight": 25.0
@@ -275,6 +283,7 @@
     "classes": "",
     "data": {
       "id": "e8",
+      "patients": 2,
       "source": 1,
       "target": 4,
       "weight": 7.142857142857142
@@ -291,6 +300,7 @@
     "classes": "",
     "data": {
       "id": "e9",
+      "patients": 10,
       "source": 1,
       "target": 5,
       "weight": 35.714285714285715
@@ -307,6 +317,7 @@
     "classes": "",
     "data": {
       "id": "e10",
+      "patients": 1,
       "source": 1,
       "target": 7,
       "weight": 3.571428571428571
@@ -323,6 +334,7 @@
     "classes": "",
     "data": {
       "id": "e11",
+      "patients": 2,
       "source": 2,
       "target": 3,
       "weight": 7.142857142857142
@@ -339,6 +351,7 @@
     "classes": "",
     "data": {
       "id": "e12",
+      "patients": 2,
       "source": 2,
       "target": 5,
       "weight": 7.142857142857142
@@ -355,6 +368,7 @@
     "classes": "",
     "data": {
       "id": "e13",
+      "patients": 4,
       "source": 3,
       "target": 5,
       "weight": 14.285714285714285
@@ -371,6 +385,7 @@
     "classes": "",
     "data": {
       "id": "e14",
+      "patients": 2,
       "source": 4,
       "target": 5,
       "weight": 7.142857142857142
@@ -387,6 +402,7 @@
     "classes": "",
     "data": {
       "id": "e15",
+      "patients": 1,
       "source": 5,
       "target": 7,
       "weight": 3.571428571428571

@@ -147,6 +147,7 @@
     "classes": "",
     "data": {
       "id": "e0",
+      "patients": 5,
       "source": 0,
       "target": 1,
       "weight": 1.2195121951219512
@@ -163,6 +164,7 @@
     "classes": "",
     "data": {
       "id": "e1",
+      "patients": 4,
       "source": 0,
       "target": 3,
       "weight": 0.975609756097561
@@ -179,6 +181,7 @@
     "classes": "",
     "data": {
       "id": "e2",
+      "patients": 9,
       "source": 1,
       "target": 3,
       "weight": 2.195121951219512
@@ -195,6 +198,7 @@
     "classes": "",
     "data": {
       "id": "e3",
+      "patients": 2,
       "source": 1,
       "target": 4,
       "weight": 0.24390243902439024
@@ -211,6 +215,7 @@
     "classes": "",
     "data": {
       "id": "e4",
+      "patients": 29,
       "source": 1,
       "target": 5,
       "weight": 4.390243902439024
@@ -227,6 +232,7 @@
     "classes": "",
     "data": {
       "id": "e5",
+      "patients": 6,
       "source": 1,
       "target": 7,
       "weight": 0.24390243902439024
@@ -243,6 +249,7 @@
     "classes": "",
     "data": {
       "id": "e6",
+      "patients": 2,
       "source": 2,
       "target": 4,
       "weight": 0.4878048780487805
@@ -259,6 +266,7 @@
     "classes": "",
     "data": {
       "id": "e7",
+      "patients": 13,
       "source": 2,
       "target": 5,
       "weight": 3.1707317073170733
@@ -275,6 +283,7 @@
     "classes": "",
     "data": {
       "id": "e8",
+      "patients": 5,
       "source": 3,
       "target": 5,
       "weight": 1.2195121951219512
@@ -291,6 +300,7 @@
     "classes": "",
     "data": {
       "id": "e9",
+      "patients": 4,
       "source": 5,
       "target": 7,
       "weight": 0.24390243902439024
