@@ -103,6 +103,12 @@
     "overlay-padding": "3px"
   }
 }, {
+  "selector": "edge:selected",
+  "style": {
+    "opacity": "0.5",
+    "line-color": "#8BB0D0"
+  }
+}, {
   "selector": "node.unhighlighted",
   "style": {
     "opacity": "0.2"
