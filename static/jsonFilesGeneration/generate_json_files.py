@@ -4,6 +4,7 @@ from collections import Counter
 import numpy as np
 import json
 import os
+import math
 
 
 file_drugs_toxs = './data/drugs_toxicities.csv'
@@ -14,13 +15,13 @@ mapToxToNum = {
     "ENDOCRINE": 2,
     "CUTANEOUS": 3,
     "PNEUMOLOGICAL": 4,
-    "ANALYTICAL": 5,
+    "ANALYTICAL": 7,
     "NEUROLOGICAL": 6,
-    "OTHER": 7,
+    "OTHER": 5,
     "CARDIOLOGICAL": 8
 }
 nodes = ["GENERAL", "GASTROINTESTINAL", "ENDOCRINE", "CUTANEOUS", "PNEUMOLOGICAL",
-         "ANALYTICAL", "NEUROLOGICAL", "OTHER", "CARDIOLOGICAL"]
+         "OTHER", "NEUROLOGICAL", "ANALYTICAL", "CARDIOLOGICAL"]
 modes = ["exp", "exp_and_noonco", "obs"]
 treatments = ["all", "ant", "imm", "qt", "tki"]
 
@@ -37,11 +38,25 @@ def to_json_node(id, name, patients):
     dict['removed'] = False
     dict['selected'] = False
     dict['selectable'] = True
-    dict['locked'] = False
+    dict['locked'] = True
     dict['grapped'] = False
     dict['grabbable'] = True
     dict['classes'] = "fn10273 fn6944 fn9471 fn10569 fn8023 fn6956 fn6935 fn8147 fn6939 fn6936 fn6629 fn7928 fn6947 fn8612 fn6957 fn8786 fn6246 fn9367 fn6945 fn6946 fn10024 fn10022 fn6811 fn9361 fn6279 fn6278 fn8569 fn7641 fn8568 fn6943"
+    dict['position'] = id_to_pos(id)
     return dict
+
+
+def id_to_pos(id):
+    """
+    Calculates the coordinates of a node in a nonagon.
+    :param id: the id of the node
+    :return: x- and y-coordinate of the node in a nonagon
+    """
+    position = {}
+    radius = 180
+    position['x'] = radius * math.cos(math.radians(-90 + id * 40))
+    position['y'] = radius * math.sin(math.radians(-90 + id * 40))
+    return position
 
 
 def to_json_edge(source, target, weight, patients, edge_count):
