@@ -154,10 +154,8 @@ Promise.all([
       });
     });
 
-    $('#config-toggle').addEventListener('click', function(){
-      $('body').classList.toggle('config-closed');
+    $('body').classList.toggle('config-closed');
 
-      cy.resize();
-    });
+    cy.resize();
 
   });
