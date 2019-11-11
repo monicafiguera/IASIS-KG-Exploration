@@ -169,16 +169,18 @@ def get_patients_from_file(file, peopleCountPerDrug, dict_drugs, mode):
                 else:
                     pid = row[0]
                     did = row[1]
-                    patients.append(pid)
                     if did not in dict_drugs.keys():
                         continue
-                    if pid not in patient_tox.keys():
-                        patient_tox[pid] = set()
+                    if f != file_non_onco:
+                        patients.append(pid)
+                        if pid not in patient_tox.keys():
+                            patient_tox[pid] = set()
 
                     for tox in dict_drugs[did]:
-                        patient_tox[pid].add(tox)
+                        if pid in patient_tox.keys():
+                            patient_tox[pid].add(tox)
 
-                    if peopleCountPerDrug.get(did) != None:
+                    if (peopleCountPerDrug.get(did) is not None) and (pid in patients):
                         peopleCountPerDrug[did] += 1
                     else:
                         line_count += 1
