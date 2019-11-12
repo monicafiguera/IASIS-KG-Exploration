@@ -85,63 +85,69 @@ def get_tox_drugs():
         line_count = 0
         drugs = []
         toxicities = []
-        dict_drugs = {}
+        dict_drugs = {}  # contains all possible drug ids with the toxicity types they are related to
         for row in csv_reader:
             if line_count == 0:
                 line_count += 1
             else:
-                if row[0] in dict_drugs.keys():
-                    dict_drugs[row[0]].add(row[3])
+                did = row[0]  # drug id
+                tox_type = row[3]
+                if did in dict_drugs.keys():
+                    dict_drugs[did].add(tox_type)
                 else:
-                    dict_drugs[row[0]] = set()
-                    dict_drugs[row[0]].add(row[3])
-                drugs.append(row[0])
-                toxicities.append(row[3])
+                    dict_drugs[did] = set()
+                    dict_drugs[did].add(tox_type)
+                drugs.append(did)
+                toxicities.append(tox_type)
                 line_count += 1
-        print(f'Processed {line_count} lines.')
+        # print(f'Processed {line_count} lines.')
 
     drugs = Counter(drugs).keys()
     toxicities = Counter(toxicities).keys()
-    tox_drugs = {}
+    drug_in_tox = {}  # specifies if a drug belongs to a toxicity type
     for t in toxicities:
-        tox_drugs[t] = {}
+        drug_in_tox[t] = {}
         for d in drugs:
-            tox_drugs[t][d] = 0
+            drug_in_tox[t][d] = 0
 
-    # set tox_drugs[t][d] to 1 for all occurrences in the data
+    # set drug_in_tox[t][d] to 1 for all occurrences in the data
     with open(file_drugs_toxs) as csv_file:
         csv_reader = csv.reader(csv_file, delimiter=',')
+        line_count = 0
         for row in csv_reader:
-            if row[3] != 'toxicity_type':
-                tox_drugs[row[3]][row[0]] = 1
+            if line_count == 0:
+                line_count += 1
+            else:
+                did = row[0]
+                tox_type = row[3]
+                drug_in_tox[tox_type][did] = 1
 
-    return tox_drugs, dict_drugs
+    return drug_in_tox, dict_drugs
 
 
-def init_drugs_and_tox_people_cnt_drug(tox_drugs):
-    drugsAndToxs = {}
-    peopleCountPerDrug = {}
+def init_drugs_and_tox_people_cnt_drug(drug_in_tox):
+    drugs_rel_toxs = {}  # drugs ids as object props with all possible pair of toxicities related to it
+    patient_cnt_per_drug = {}
 
-    for keys in tox_drugs:
-        for keys2 in tox_drugs:
-            toxs_related = ('', '')
-            for x in tox_drugs[keys]:
-                if tox_drugs[keys][x] > 0:
-                    if tox_drugs[keys2][x] > 0:
-                        if keys != keys2:  # not the diagonal
-                            toxs_related = (keys, keys2)
-                            if drugsAndToxs.get(x) is None:
-                                drugsAndToxs[x] = []
-                                drugsAndToxs[x].append(toxs_related)
+    for key_t1 in drug_in_tox:
+        for key_t2 in drug_in_tox:
+            for did in drug_in_tox[key_t2]:
+                if drug_in_tox[key_t1][did] > 0:
+                    if drug_in_tox[key_t2][did] > 0:
+                        if key_t1 != key_t2:  # not the diagonal
+                            toxs_related = (key_t1, key_t2)
+                            if drugs_rel_toxs.get(did) is None:
+                                drugs_rel_toxs[did] = []
+                                drugs_rel_toxs[did].append(toxs_related)
                             else:
-                                drugsAndToxs[x].append(toxs_related)
+                                drugs_rel_toxs[did].append(toxs_related)
 
-                            peopleCountPerDrug[x] = 0
+                            patient_cnt_per_drug[did] = 0
 
-    return drugsAndToxs, peopleCountPerDrug
+    return drugs_rel_toxs, patient_cnt_per_drug
 
 
-def get_patients_from_file(file, peopleCountPerDrug, dict_drugs, mode):
+def get_patients_from_file(file, patient_cnt_per_drug, dict_drugs, mode):
     files_to_analyze = [file]
     if mode == "exp_and_noonco":
         files_to_analyze.append(file_non_onco)
@@ -180,8 +186,8 @@ def get_patients_from_file(file, peopleCountPerDrug, dict_drugs, mode):
                         if pid in patient_tox.keys():
                             patient_tox[pid].add(tox)
 
-                    if (peopleCountPerDrug.get(did) is not None) and (pid in patients):
-                        peopleCountPerDrug[did] += 1
+                    if (patient_cnt_per_drug.get(did) is not None) and (pid in patients):
+                        patient_cnt_per_drug[did] += 1
                     else:
                         line_count += 1
                         # print("drug does not relate to a pair o tox", drug_id)
@@ -203,34 +209,24 @@ def get_patients_from_file(file, peopleCountPerDrug, dict_drugs, mode):
                     line_count += 1
                 else:
                     tox_patients[row[1]][row[0]] = 1
-        drugsAndToxs, peopleCountPerDrug = init_drugs_and_tox_people_cnt_drug(tox_patients)
+        drugs_rel_toxs, patient_cnt_per_drug = init_drugs_and_tox_people_cnt_drug(tox_patients)
     else:
-        drugsAndToxs = None
+        drugs_rel_toxs = None
 
-    return patients, patient_tox, peopleCountPerDrug, drugsAndToxs
+    return patients, patient_tox, patient_cnt_per_drug, drugs_rel_toxs
 
 
-def calculate_cooccurrence_matrix(drugsAndToxs, peopleCountPerDrug, patients):
+def calculate_cooccurrence_matrix(drugs_rel_toxs, patient_cnt_per_drug, patients):
     coocMatrix = np.zeros((9, 9))
 
-    for keys in drugsAndToxs:
-        for tup in drugsAndToxs[keys]:
+    for keys in drugs_rel_toxs:
+        for tup in drugs_rel_toxs[keys]:
             i = mapToxToNum[tup[0]]
             j = mapToxToNum[tup[1]]
-            if peopleCountPerDrug is None:
+            if patient_cnt_per_drug is None:
                 coocMatrix[i][j] += 1
             else:
-                coocMatrix[i][j] += int(peopleCountPerDrug[keys])  # diff patients taking the drug
-
-    sums = []
-    for i, row in enumerate(coocMatrix):
-        sums.append(0)
-        for j, col in enumerate(coocMatrix[i]):
-            sums[i] += coocMatrix[i][j]
-
-    # print("*")
-    # print(sums)
-    # print("*")
+                coocMatrix[i][j] += int(patient_cnt_per_drug[keys])  # different number of patients taking the drug
 
     for i, row in enumerate(coocMatrix):
         for j, col in enumerate(coocMatrix[i]):
@@ -238,7 +234,7 @@ def calculate_cooccurrence_matrix(drugsAndToxs, peopleCountPerDrug, patients):
                 coocMatrix[i][j] = (coocMatrix[i][j] / len(patients)) * 100
 
     # print(coocMatrix)
-    return coocMatrix, sums
+    return coocMatrix
 
 
 def get_file_list(dir):
@@ -246,7 +242,7 @@ def get_file_list(dir):
 
 
 if __name__ == "__main__":
-    tox_drugs, dict_drugs = get_tox_drugs()
+    drug_in_tox, dict_drugs = get_tox_drugs()
 
     for mode in modes:
         for treat in treatments:
@@ -267,14 +263,14 @@ if __name__ == "__main__":
 
             # process all the files
             for file in files_to_be_processed:
-                peopleCountPerDrug = None
+                patient_cnt_per_drug = None
                 if mode == "obs":
-                    patients, patient_tox, _, drugsAndToxs = get_patients_from_file(file, None, dict_drugs, mode)
+                    patients, patient_tox, _, drugs_rel_toxs = get_patients_from_file(file, None, dict_drugs, mode)
                 else:
-                    drugsAndToxs, peopleCountPerDrug = init_drugs_and_tox_people_cnt_drug(tox_drugs)
-                    patients, patient_tox, peopleCountPerDrug, _ = get_patients_from_file(file, peopleCountPerDrug, dict_drugs, mode)
+                    drugs_rel_toxs, patient_cnt_per_drug = init_drugs_and_tox_people_cnt_drug(drug_in_tox)
+                    patients, patient_tox, patient_cnt_per_drug, _ = get_patients_from_file(file, patient_cnt_per_drug, dict_drugs, mode)
 
-                coocMatrix, sums = calculate_cooccurrence_matrix(drugsAndToxs, peopleCountPerDrug, patients)
+                coocMatrix = calculate_cooccurrence_matrix(drugs_rel_toxs, patient_cnt_per_drug, patients)
 
                 links = []
                 for i, n in enumerate(nodes):
@@ -293,18 +289,25 @@ if __name__ == "__main__":
                                     if v == j:
                                         dest = k
 
-                                # npatients = []
                                 npatients = 0
                                 for patient in patient_tox.keys():
                                     if src in patient_tox[patient] and dest in patient_tox[patient]:
-                                        # npatients.append(patient)
                                         npatients += 1
                                 links.append({"source": i, "target": j, "weight": elem, "patients": npatients})
 
                 data = []
 
                 for i, n in enumerate(nodes):
-                    data.append(to_json_node(i, n, sums[i]))
+                    for k, v in mapToxToNum.items():
+                        if v == i:
+                            src = k
+
+                    npat = 0
+                    for patient in patient_tox.keys():
+                        if src in patient_tox[patient]:
+                            npat += 1
+
+                    data.append(to_json_node(i, n, npat))
 
                 for i, l in enumerate(links):
                     data.append(to_json_edge(l["source"], l["target"], l["weight"], l["patients"], i))
