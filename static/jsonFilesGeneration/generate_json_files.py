@@ -272,6 +272,8 @@ if __name__ == "__main__":
 
                 coocMatrix = calculate_cooccurrence_matrix(drugs_rel_toxs, patient_cnt_per_drug, patients)
 
+                patients_per_node = dict()
+                patients_per_edge = dict()
                 links = []
                 for i, n in enumerate(nodes):
                     for j, elem in enumerate(coocMatrix[i]):
@@ -291,9 +293,24 @@ if __name__ == "__main__":
 
                                 npatients = 0
                                 for patient in patient_tox.keys():
+                                    if src not in patients_per_node.keys():
+                                        patients_per_node[src] = [patient]
+                                    elif patient not in patients_per_node[src]:
+                                        patients_per_node[src].append(patient)
+
+                                    if dest not in patients_per_node.keys():
+                                        patients_per_node[dest] = [patient]
+                                    elif patient not in patients_per_node[dest]:
+                                        patients_per_node[dest].append(patient)
+
                                     if src in patient_tox[patient] and dest in patient_tox[patient]:
                                         npatients += 1
-                                links.append({"source": i, "target": j, "weight": elem, "patients": npatients})
+                                        key = src + "-" + dest
+                                        if key not in patients_per_edge.keys():
+                                            patients_per_edge[key] = [patient]
+                                        else:
+                                            patients_per_edge[key].append(patient)
+                                links.append({"source": i, "target": j, "weight": elem, "patients": npatients})  # TODO: use count of patients in patients_per_edge
 
                 data = []
 
@@ -307,7 +324,7 @@ if __name__ == "__main__":
                         if src in patient_tox[patient]:
                             npat += 1
 
-                    data.append(to_json_node(i, n, npat))
+                    data.append(to_json_node(i, n, npat))  # TODO: use count of patients in patients_per_node
 
                 for i, l in enumerate(links):
                     data.append(to_json_edge(l["source"], l["target"], l["weight"], l["patients"], i))
@@ -324,3 +341,18 @@ if __name__ == "__main__":
 
                 filename = "/line" + str(index) + "_" + treat + "_" + mode + ".json"
                 open(dirname + filename, "w", encoding="utf8").write(json_data)
+
+                # write data for tree visualization
+                dirname = "./patients"
+                if not os.path.exists(dirname):
+                    os.mkdir(dirname)
+
+                filename = "/line" + str(index) + "_" + treat + "_" + mode + ".csv"
+                with open(dirname + filename, "w", encoding="utf8") as pfile:
+                    for k, v in patients_per_node.items():
+                        for p in v:
+                            pfile.write(k + "," + p + "\n")
+
+                    for k, v in patients_per_edge.items():
+                        for p in v:
+                            pfile.write(k + "," + p + "\n")
