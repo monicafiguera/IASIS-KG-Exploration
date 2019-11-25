@@ -293,15 +293,17 @@ if __name__ == "__main__":
 
                                 npatients = 0
                                 for patient in patient_tox.keys():
-                                    if src not in patients_per_node.keys():
-                                        patients_per_node[src] = [patient]
-                                    elif patient not in patients_per_node[src]:
-                                        patients_per_node[src].append(patient)
+                                    if src in patient_tox[patient]:
+                                        if src not in patients_per_node.keys():
+                                            patients_per_node[src] = [patient]
+                                        elif patient not in patients_per_node[src]:
+                                            patients_per_node[src].append(patient)
 
-                                    if dest not in patients_per_node.keys():
-                                        patients_per_node[dest] = [patient]
-                                    elif patient not in patients_per_node[dest]:
-                                        patients_per_node[dest].append(patient)
+                                    if dest in patient_tox[patient]:
+                                        if dest not in patients_per_node.keys():
+                                            patients_per_node[dest] = [patient]
+                                        elif patient not in patients_per_node[dest]:
+                                            patients_per_node[dest].append(patient)
 
                                     if src in patient_tox[patient] and dest in patient_tox[patient]:
                                         npatients += 1
