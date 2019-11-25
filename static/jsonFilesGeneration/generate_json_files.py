@@ -349,6 +349,7 @@ if __name__ == "__main__":
 
                 filename = "/line" + str(index) + "_" + treat + "_" + mode + ".csv"
                 with open(dirname + filename, "w", encoding="utf8") as pfile:
+                    pfile.write("key,value\n")
                     for k, v in patients_per_node.items():
                         for p in v:
                             pfile.write(k + "," + p + "\n")
